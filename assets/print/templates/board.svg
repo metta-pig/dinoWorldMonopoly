@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200mm" height="200mm">
+  <rect width="200" height="200" fill="#1a2332"/>
+  <g stroke="#2a3a4d" stroke-width="0.3">
+    <line x1="0" y1="100" x2="200" y2="100"/>
+    <line x1="100" y1="0" x2="100" y2="200"/>
+  </g>
+  <text x="100" y="105" text-anchor="middle" fill="#8fa3b8" font-size="8" font-family="system-ui,sans-serif">Board</text>
+</svg>

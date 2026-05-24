@@ -1,0 +1,35 @@
+---
+description: Game builder template conventions
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Game builder template
+
+## Architecture
+
+- **Stack**: Vite, React, TypeScript, `react-router-dom`. Feature layout: `src/game/` (pure rules), `src/pages/`, `src/lib/`.
+- **Entry**: `applyGamePresetsFromEnv()` in `src/main.tsx` runs before render; sets `data-game-type`, `data-deliverable`, `data-audience` on `document.documentElement`.
+
+## Presets
+
+- Game type, deliverable, audience, art direction: manifests in `src/lib/*Presets.ts`; see `PRESETS.md`.
+- Env: `VITE_GAME_TYPE`, `VITE_GAME_DELIVERABLE`, `VITE_GAME_AUDIENCE`, `VITE_GAME_MULTIPLAYER`, `VITE_GAME_TITLE`.
+
+## Artifacts
+
+- Player rules: **only** root `RULES.md`. Sync to `public/RULES.md` when building digital-web.
+- Designer docs: `GAME_SPEC.md`, `COMPONENTS.md`, `BALANCE.md`, `PLAYTEST.md`, `CHECKLIST.md`, `ASSUMPTIONS.md`.
+- Print: **SVG only** under `assets/print/`; generated output in `assets/print/generated/` (gitignored).
+- Card art: image generation allowed; prefer SVG composition for print.
+
+## Quality
+
+- TypeScript **strict**; `npm run typecheck` before calling digital deliverable done.
+- v1 digital: **hot-seat** default; multiplayer network is experimental.
+
+## Revamp skill
+
+- Use `@game-build` (`.cursor/skills/game-build/SKILL.md`) for full workflow.
+- One repo per game; `game-input/` is gitignored per-game drops.

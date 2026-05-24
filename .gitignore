@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+*.local
+.env
+.env.*.local
+game-input/*
+!game-input/README.md
+assets/print/generated/*
+!assets/print/README.md
