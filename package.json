@@ -8,7 +8,8 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "balance:sim": "tsx scripts/balance-sim.ts"
+    "balance:sim": "tsx scripts/balance-sim.ts",
+    "print:habitats": "tsx scripts/generate-habitat-print.ts"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -16,6 +17,7 @@
     "react-router-dom": "^7.6.0"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react": "^4.4.1",

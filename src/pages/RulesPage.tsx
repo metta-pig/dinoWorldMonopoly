@@ -16,12 +16,20 @@ export default function RulesPage() {
   }, []);
 
   return (
-    <main className="shell">
-      <h1>Rules</h1>
+    <main className="shell rules-page">
+      <header className="rules-page-header">
+        <h1>How to play</h1>
+        <p className="meta">Dino World Monopoly — rules for explorers and park rangers</p>
+      </header>
       <div className="panel rules-body">{text}</div>
-      <Link className="btn secondary" to="/">
-        Home
-      </Link>
+      <div className="btn-row rules-page-actions">
+        <Link className="btn-primary" to="/play">
+          🎲 Start playing
+        </Link>
+        <Link className="btn-secondary" to="/">
+          ← Park entrance
+        </Link>
+      </div>
     </main>
   );
 }
